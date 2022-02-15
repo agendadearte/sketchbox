@@ -1,0 +1,17 @@
+{
+  "name": "@agendadearte/sketchbox",
+  "version": "0.0.0",
+  "description": "UI Components Library for agendadearte.com",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agendadearte/sketchbox.git"
+  },
+  "author": "Aurelio Gamero",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/agendadearte/sketchbox/issues"
+  },
+  "homepage": "https://github.com/agendadearte/sketchbox#readme"
+}
