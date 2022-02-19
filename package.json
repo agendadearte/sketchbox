@@ -2,8 +2,6 @@
   "name": "@agendadearte/sketchbox",
   "version": "0.0.0",
   "description": "UI Components Library for agendadearte.com",
-  "scripts": {
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/agendadearte/sketchbox.git"
@@ -13,5 +11,56 @@
   "bugs": {
     "url": "https://github.com/agendadearte/sketchbox/issues"
   },
-  "homepage": "https://github.com/agendadearte/sketchbox#readme"
+  "homepage": "https://github.com/agendadearte/sketchbox#readme",
+  "scripts": {
+    "start": "npm run storybook",
+    "lint": "npx eslint --fix src/**",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "prepublishOnly": "tsc -p tsconfig.release.json",
+    "prepare": "husky install"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "typestyle": "^2.2.0"
+  },
+  "devDependencies": {
+    "@storybook/addon-essentials": "^6.4.19",
+    "@storybook/react": "^6.4.19",
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-storybook": "^0.5.7",
+    "husky": "^7.0.4",
+    "prettier": "^2.5.1"
+  },
+  "engines": {
+    "npm": "^8.3.0"
+  },
+  "overrides": {
+    "glob-parent": "^6.0.0",
+    "postcss": "^8.4.0",
+    "trim": "^1.0.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }
