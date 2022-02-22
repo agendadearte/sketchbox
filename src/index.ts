@@ -1,1 +1,1 @@
-export const index = undefined;
+export { Card } from "./components/Card";
