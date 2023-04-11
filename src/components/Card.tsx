@@ -1,7 +1,6 @@
-import { FC, ReactElement } from "react";
 import { style } from "typestyle";
 
-export type CardProps = {
+type CardProps = {
   author: string;
   title: string;
   dates: {
@@ -46,12 +45,7 @@ const imageCss = style({
   width: "100%",
 });
 
-export const Card: FC<CardProps> = ({
-  author,
-  title,
-  dates,
-  images,
-}): ReactElement => (
+export const Card = ({ author, title, dates, images }: CardProps) => (
   <article className={cardCss}>
     <h1 className={authorCss}>{author}</h1>
     <h2 className={titleCss}>{title}</h2>

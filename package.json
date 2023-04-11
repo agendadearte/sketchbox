@@ -12,12 +12,13 @@
     "url": "https://github.com/agendadearte/sketchbox/issues"
   },
   "homepage": "https://github.com/agendadearte/sketchbox#readme",
+  "type": "module",
   "scripts": {
     "start": "npm run storybook",
     "lint": "npx eslint --fix src/**",
     "test": "build-storybook && loki",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
     "prepublishOnly": "tsc -p tsconfig.release.json",
     "prepare": "husky install"
   },
@@ -33,25 +34,29 @@
     "typestyle": "^2.2.0"
   },
   "devDependencies": {
-    "@storybook/addon-essentials": "^6.4.19",
-    "@storybook/react": "^6.4.19",
+    "@storybook/addon-essentials": "^7.0.2",
+    "@storybook/blocks": "^7.0.2",
+    "@storybook/react": "^7.0.2",
+    "@storybook/react-vite": "^7.0.2",
     "@typescript-eslint/eslint-plugin": "^5.12.0",
     "@typescript-eslint/parser": "^5.12.0",
     "eslint": "^8.9.0",
     "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-mdx": "^2.0.5",
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-storybook": "^0.5.7",
     "husky": "^7.0.4",
-    "loki": "^0.28.1",
-    "prettier": "^2.5.1"
+    "loki": "^0.31.1",
+    "prettier": "^2.8.7",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "storybook": "^7.0.2",
+    "typescript": "^4.9.3",
+    "vite": "^4.2.1"
   },
   "engines": {
-    "npm": "^8.3.0"
-  },
-  "overrides": {
-    "glob-parent": "^6.0.0",
-    "postcss": "^8.4.0",
-    "trim": "^1.0.0"
+    "npm": ">=9.0.0",
+    "node": ">=18.0.0"
   },
   "browserslist": {
     "production": [
