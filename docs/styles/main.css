@@ -1,0 +1,76 @@
+@import url('https://www.unpkg.com/@agendadearte/palette@latest/dist/tokens.css');
+
+:root {
+    --color-primary-base-fallback: black;
+    --color-primary-light-fallback: slategrey;
+}
+
+@font-face {
+    font-family: 'Barlow Condensed';
+    font-style: normal;
+    font-weight: 400;
+    font-display: fallback;
+    src: url('../assets/fonts/BarlowCondensed-Regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Barlow Condensed';
+    font-style: normal;
+    font-weight: 500;
+    font-display: fallback;
+    src: url('../assets/fonts/BarlowCondensed-Medium.woff2') format('woff2');
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+}
+
+img {
+    display: block;
+}
+
+.logo__container {
+    margin-top: 10vw;
+    text-align: center;
+}
+
+.logo__text {
+    margin: 0;
+    font-size: 3rem;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--color-primary-light, var(--color-primary-light-fallback));
+}
+
+.logo-mask {
+    display: inline-block;
+    position: relative;
+}
+
+.logo-mask::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-primary-base, var(--color-primary-base-fallback));
+    mask-image: url(../assets/images/logo-sketchbox.svg);
+    mask-size: cover;
+    -webkit-mask-image: url(../assets/images/logo-sketchbox.svg);
+    -webkit-mask-size: cover;
+}
+
+@media (min-width: 240px) {
+    .logo__text {
+        font-size: 4.2rem;
+    }
+}
+
+@media (min-width: 640px) {
+    .logo__text {
+        font-size: 8rem;
+    }
+}
