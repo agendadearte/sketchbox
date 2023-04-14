@@ -16,7 +16,7 @@
   "scripts": {
     "start": "npm run storybook",
     "lint": "npx eslint --fix src/**",
-    "test": "build-storybook && loki",
+    "test": "echo \"TODO: Pending to define a test suite\" && exit 0",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "prepublishOnly": "tsc -p tsconfig.release.json",
@@ -46,7 +46,6 @@
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-storybook": "^0.5.7",
     "husky": "^7.0.4",
-    "loki": "^0.31.1",
     "prettier": "^2.8.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

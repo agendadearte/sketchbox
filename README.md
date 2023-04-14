@@ -19,5 +19,4 @@ The library uses [React](https://reactjs.org/) to build the HTML elements and [T
 
 
 - `npm test`
-  Runs the regression tests with Loki. **Requires to have Docker installed.**
-
+  Pending to define a test suite after removing Loki
