@@ -13,6 +13,7 @@
   },
   "exclude": [
     "node_modules",
+    "**/*.docs.mdx",
     "**/*.stories.tsx"
   ]
 }

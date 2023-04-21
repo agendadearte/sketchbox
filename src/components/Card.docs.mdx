@@ -1,0 +1,32 @@
+import { Meta, Primary, Controls, ColorPalette, ColorItem, Title } from '@storybook/blocks';
+
+import * as tokens from "@agendadearte/palette";
+import * as CardStories from './Card.stories';
+
+<Meta of={CardStories} />
+
+<Title>Card</Title>
+
+<Primary />
+
+## Props
+<Controls />
+
+## Tokens
+<ColorPalette>
+    <ColorItem
+        title="--color-primary-dark"
+        subtitle="Author name"
+        colors={{ "": tokens.ColorPrimaryDark }}
+    />
+    <ColorItem
+        title="--color-primary-light"
+        subtitle="Event title"
+        colors={{ "": tokens.ColorPrimaryLight }}
+    />
+    <ColorItem
+        title="--color-primary-base"
+        subtitle="Event dates"
+        colors={{ "": tokens.ColorPrimaryBase }}
+    />
+</ColorPalette>

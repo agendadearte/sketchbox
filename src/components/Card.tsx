@@ -1,4 +1,5 @@
 import { style } from "typestyle";
+import * as tokens from "@agendadearte/palette";
 
 type CardProps = {
   author: string;
@@ -14,30 +15,32 @@ type CardProps = {
 
 const cardCss = style({
   padding: ".5rem",
-  fontFamily: "Rubik, sans-serif",
 });
 
 const authorCss = style({
   marginTop: 0,
   marginBottom: 0,
-  fontFamily: "Roboto Slab, serif",
   fontSize: "1.5rem",
+  fontFamily: "Rubik, sans-serif",
   fontWeight: 400,
+  color: `var(--color-primary-dark, ${tokens.ColorPrimaryDark})`,
 });
 
 const titleCss = style({
   marginTop: 0,
   marginBottom: ".5rem",
-  fontSize: "1rem",
+  fontSize: "1.2rem",
+  fontFamily: "Rubik, sans-serif",
   fontWeight: 300,
-  color: "slategrey",
+  color: `var(--color-primary-light, ${tokens.ColorPrimaryLight})`,
 });
 
 const datesCss = style({
-  display: "flex",
-  alignItems: "center",
   marginBottom: ".5rem",
   fontSize: "1rem",
+  fontFamily: "Rubik, sans-serif",
+  fontWeight: 400,
+  color: `var(--color-primary-base, ${tokens.ColorPrimaryBase})`,
 });
 
 const imageCss = style({

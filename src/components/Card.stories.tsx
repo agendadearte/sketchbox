@@ -5,7 +5,7 @@ import { Card } from "./Card";
 const meta = {
   title: "Card",
   component: Card,
-  tags: ["autodocs"],
+  tags: [],
   decorators: [(Story) => <div style={{ width: "20rem" }}>{Story()}</div>],
 } satisfies Meta<typeof Card>;
 
