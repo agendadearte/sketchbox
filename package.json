@@ -11,14 +11,15 @@
   "bugs": {
     "url": "https://github.com/agendadearte/sketchbox/issues"
   },
-  "homepage": "https://github.com/agendadearte/sketchbox#readme",
+  "homepage": "https://sketchbox.agendadearte.com/",
   "type": "commonjs",
   "scripts": {
     "start": "npm run storybook",
     "lint": "npx eslint --fix src/**",
     "test": "echo \"TODO: Pending to define a test suite\" && exit 0",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
+    "storybook": "storybook dev --disable-telemetry -p 6006",
+    "build-storybook": "storybook build --disable-telemetry",
+    "build-docs": "npm run build-storybook -- -o ./docs && echo 'sketchbox.agendadearte.com' > ./docs/CNAME",
     "prepublishOnly": "tsc -p tsconfig.release.json",
     "prepare": "husky install"
   },
