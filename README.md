@@ -1,22 +1,7 @@
-# Sketchbox
-**The UI Components Library for [agendadearte.com](https://www.agendadearte.com/)**
+# Welcome to Sketchbox,<br/>the UI library for [agendadearte.com](https://agendadearte.com)
 
-'Sketchbox' is the UI Components Library, with the pieces designed for building 'agendadearte.com'.  
-The library uses [React](https://reactjs.org/) to build the HTML elements and [Typestyle](https://typestyle.github.io/) to manage the CSS style props.
+Sketchbox is an open source component library that implements the 
+[agendadearte.com](https://agendadearte.com) website. 
+The library is free to use if it can help or inspire your own project.
 
-### Available Scripts
-
-- `npm start` or `npm run storybook`
-  Runs the Storybook app in the development mode.
-
-
-- `npm run build-storybook`
-  Builds the Storybook app as static web application.
-
-
-- `npm run lint`
-  Checks and fix the code format with ESLint and Prettier.
-
-
-- `npm test`
-  Pending to define a test suite after removing Loki
+For the complete description of installing and using the project, as well as examples of using the components, visit the page: [sketchbox.agendadearte.com](https://sketchbox.agendadearte.com/).
