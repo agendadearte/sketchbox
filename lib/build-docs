@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+npm run build-storybook -- -o ./docs 
+echo "sketchbox.agendadearte.com" > ./docs/CNAME
+touch ./docs/.nojekyll
