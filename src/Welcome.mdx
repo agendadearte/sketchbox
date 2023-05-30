@@ -1,4 +1,5 @@
-import { Meta } from '@storybook/blocks';
+import { Meta, Source } from '@storybook/blocks';
+import { buildPropName } from "./utils/buildPropName";
 
 <Meta title="Welcome" />
 
@@ -10,9 +11,9 @@ The library is free to use if it can help or inspire your own project.
 
 ## Installation
 
-```
+<Source code={`
 npm install @agendadearte/sketchbox
-```
+`}/>
 
 ## CSS custom properties
 Sketchbox uses inline styles, so the classes will look like random hashes. 
@@ -22,36 +23,36 @@ the default styles.
 In the documentation of each component there is a list of supported CSS custom 
 properties and which elements it modifies.
 
-```
-.style-hash {
-  color: var(--color-primary-dark, hsla(200, 10%, 0%, 1));
+<Source code={`
+.any-css-hash {
+  style-prop: var(${buildPropName('component', 'styleDefinition')}, style-fallback);
   ...
 }
-```
+`}/>
 
 ## Rubik font
 Sketchbox uses the [Rubik](https://fonts.google.com/specimen/Rubik) font family and relies only on the **300**, **400**, and **500** font weights.
 You can add fonts to your project with npm via **[Fontsource](https://fontsource.org/)**, or with the **Google Fonts** CDN.
 
 #### Fontsource
-```
+<Source code={`
 npm install @fontsource/rubik
-```
+`}/>
 
 Then you can import it in your entry point like this:
 
-```
+<Source code={`
 import '@fontsource/rubik/300.css';
 import '@fontsource/rubik/400.css';
 import '@fontsource/rubik/500.css';
-```
+`}/>
 
 #### Google Web Fonts
 To install the Rubik font in your project using the Google Web Fonts CDN, add the following code snippet inside your project's `<head />` tag:
 
-```
+<Source code={`
 <link
   rel="stylesheet"
   href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700&amp;display=swap"
 />
-```
+`}/>

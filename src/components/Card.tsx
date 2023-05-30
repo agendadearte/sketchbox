@@ -1,5 +1,4 @@
-import { style } from "typestyle";
-import * as tokens from "@agendadearte/palette";
+import * as css from "./assets/styles";
 
 type CardProps = {
   author: string;
@@ -13,51 +12,16 @@ type CardProps = {
   images: string[];
 };
 
-const cardCss = style({
-  padding: ".5rem",
-});
-
-const authorCss = style({
-  marginTop: 0,
-  marginBottom: 0,
-  fontSize: "1.5rem",
-  fontFamily: "Rubik, sans-serif",
-  fontWeight: 400,
-  color: `var(--color-primary-dark, ${tokens.ColorPrimaryDark})`,
-});
-
-const titleCss = style({
-  marginTop: 0,
-  marginBottom: ".5rem",
-  fontSize: "1.2rem",
-  fontFamily: "Rubik, sans-serif",
-  fontWeight: 300,
-  color: `var(--color-primary-light, ${tokens.ColorPrimaryLight})`,
-});
-
-const datesCss = style({
-  marginBottom: ".5rem",
-  fontSize: "1rem",
-  fontFamily: "Rubik, sans-serif",
-  fontWeight: 400,
-  color: `var(--color-primary-base, ${tokens.ColorPrimaryBase})`,
-});
-
-const imageCss = style({
-  display: "block",
-  width: "100%",
-});
-
 export const Card = ({ author, title, dates, images }: CardProps) => (
-  <article className={cardCss}>
-    <h1 className={authorCss}>{author}</h1>
-    <h2 className={titleCss}>{title}</h2>
-    <div className={datesCss}>
+  <article className={css.container}>
+    <h1 className={css.author}>{author}</h1>
+    <h2 className={css.title}>{title}</h2>
+    <div className={css.dates}>
       <span>
         Del <time dateTime={dates.initialUTF}>{dates.initialString}.</time> al{" "}
         <time dateTime={dates.finalUTF}>{dates.finalString}.</time>
       </span>
     </div>
-    {images.length && <img className={imageCss} src={images[0]} alt="" />}
+    {images.length && <img className={css.image} src={images[0]} alt="" />}
   </article>
 );

@@ -32,7 +32,6 @@
     "access": "public"
   },
   "dependencies": {
-    "@agendadearte/palette": "^0.3.0",
     "typestyle": "^2.4.0"
   },
   "devDependencies": {
