@@ -1,4 +1,8 @@
 {
   "preset": "ts-jest",
-  "testEnvironment": "jsdom"
+  "testEnvironment": "jsdom",
+  "moduleNameMapper": {
+    "@/(.*)": "<rootDir>/src/$1",
+    "#root/(.*)": "<rootDir>/$1"
+  }
 }

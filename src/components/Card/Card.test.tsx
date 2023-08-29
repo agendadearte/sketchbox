@@ -1,8 +1,8 @@
 import { render, screen } from "@testing-library/react";
 import { getStyles } from "typestyle";
 
+import { cssStringToObject } from "@/utils/cssStringToObject";
 import { Card } from "./Card";
-import { cssStringToObject } from "../utils/cssStringToObject";
 
 let stylesJson: { [key: string]: any } = {};
 
@@ -18,7 +18,7 @@ beforeEach(() => {
         finalUTF: "Any final UTF",
       }}
       images={["Any images array"]}
-    />
+    />,
   );
 
   const stylesCss = getStyles();
@@ -30,16 +30,16 @@ test("Autor CSS custom properties", async () => {
   const autorStyles = stylesJson[AutorElement.className];
 
   expect(autorStyles.color).toContain(
-    "var(--sketch-box-card-author-font-color"
+    "var(--sketch-box-card-author-font-color",
   );
   expect(autorStyles["font-family"]).toContain(
-    "var(--sketch-box-card-author-font-family"
+    "var(--sketch-box-card-author-font-family",
   );
   expect(autorStyles["font-size"]).toContain(
-    "var(--sketch-box-card-author-font-size"
+    "var(--sketch-box-card-author-font-size",
   );
   expect(autorStyles["font-weight"]).toContain(
-    "var(--sketch-box-card-author-font-weight"
+    "var(--sketch-box-card-author-font-weight",
   );
 });
 
@@ -49,13 +49,13 @@ test("Title CSS custom properties", async () => {
 
   expect(titleStyles.color).toContain("var(--sketch-box-card-title-font-color");
   expect(titleStyles["font-family"]).toContain(
-    "var(--sketch-box-card-title-font-family"
+    "var(--sketch-box-card-title-font-family",
   );
   expect(titleStyles["font-size"]).toContain(
-    "var(--sketch-box-card-title-font-size"
+    "var(--sketch-box-card-title-font-size",
   );
   expect(titleStyles["font-weight"]).toContain(
-    "var(--sketch-box-card-title-font-weight"
+    "var(--sketch-box-card-title-font-weight",
   );
 });
 
@@ -64,15 +64,15 @@ test("Dates CSS custom properties", async () => {
   const dateTimeStyles = stylesJson[DateTimeElement.className];
 
   expect(dateTimeStyles.color).toContain(
-    "var(--sketch-box-card-dates-font-color"
+    "var(--sketch-box-card-dates-font-color",
   );
   expect(dateTimeStyles["font-family"]).toContain(
-    "var(--sketch-box-card-dates-font-family"
+    "var(--sketch-box-card-dates-font-family",
   );
   expect(dateTimeStyles["font-size"]).toContain(
-    "var(--sketch-box-card-dates-font-size"
+    "var(--sketch-box-card-dates-font-size",
   );
   expect(dateTimeStyles["font-weight"]).toContain(
-    "var(--sketch-box-card-dates-font-weight"
+    "var(--sketch-box-card-dates-font-weight",
   );
 });

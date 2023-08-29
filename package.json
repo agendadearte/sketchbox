@@ -19,7 +19,7 @@
     "storybook": "storybook dev --disable-telemetry -p 6006",
     "build-storybook": "storybook build --disable-telemetry",
     "build-docs": "./lib/build-docs",
-    "prepare": "tsc -p tsconfig.release.json",
+    "prepare": "tsc -p tsconfig.release.json && tsc-alias -p tsconfig.json",
     "postinstall": "husky install"
   },
   "main": "dist/index.js",
@@ -54,6 +54,7 @@
     "prettier": "^3.0.2",
     "storybook": "^7.4.0",
     "ts-jest": "^29.1.1",
+    "tsc-alias": "^1.8.7",
     "typescript": "^5.2.2",
     "vite": "^4.4.9"
   },

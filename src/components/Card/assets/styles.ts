@@ -1,5 +1,5 @@
 import { style } from "typestyle";
-import { buildPropName } from "../../utils/buildPropName";
+import { buildPropName } from "@/utils/buildPropName";
 
 import { css } from "./variables";
 
