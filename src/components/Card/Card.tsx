@@ -1,3 +1,4 @@
+import { FC } from "react";
 import * as css from "./assets/styles";
 
 type CardProps = {
@@ -12,7 +13,7 @@ type CardProps = {
   images: string[];
 };
 
-export const Card = ({ author, title, dates, images }: CardProps) => (
+export const Card: FC<CardProps> = ({ author, title, dates, images }) => (
   <article className={css.container}>
     <h1 className={css.author}>{author}</h1>
     <h2 className={css.title}>{title}</h2>
