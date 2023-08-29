@@ -12,7 +12,6 @@
     "url": "https://github.com/agendadearte/sketchbox/issues"
   },
   "homepage": "https://sketchbox.agendadearte.com/",
-  "type": "commonjs",
   "scripts": {
     "start": "npm run storybook",
     "lint": "npx eslint --fix src/**",
@@ -20,8 +19,8 @@
     "storybook": "storybook dev --disable-telemetry -p 6006",
     "build-storybook": "storybook build --disable-telemetry",
     "build-docs": "./lib/build-docs",
-    "prepublishOnly": "tsc -p tsconfig.release.json",
-    "prepare": "husky install"
+    "prepare": "tsc -p tsconfig.release.json",
+    "postinstall": "husky install"
   },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -35,32 +34,32 @@
     "typestyle": "^2.4.0"
   },
   "devDependencies": {
-    "@fontsource/rubik": "^5.0.2",
-    "@storybook/addon-essentials": "^7.0.2",
-    "@storybook/blocks": "^7.0.2",
-    "@storybook/react": "^7.0.2",
-    "@storybook/react-vite": "^7.0.2",
+    "@fontsource/rubik": "^5.0.9",
+    "@storybook/addon-essentials": "^7.4.0",
+    "@storybook/blocks": "^7.4.0",
+    "@storybook/react": "^7.4.0",
+    "@storybook/react-vite": "^7.4.0",
     "@testing-library/react": "^14.0.0",
-    "@types/jest": "^29.5.2",
-    "@typescript-eslint/eslint-plugin": "^5.12.0",
-    "@typescript-eslint/parser": "^5.12.0",
-    "eslint": "^8.9.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-mdx": "^2.0.5",
-    "eslint-plugin-react": "^7.28.0",
-    "eslint-plugin-storybook": "^0.5.7",
+    "@types/jest": "^29.5.4",
+    "@typescript-eslint/eslint-plugin": "^6.5.0",
+    "@typescript-eslint/parser": "^6.5.0",
+    "eslint": "^8.48.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-mdx": "^2.2.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-storybook": "^0.6.13",
     "husky": "^8.0.3",
-    "jest": "^29.5.0",
-    "jest-environment-jsdom": "^29.5.0",
-    "prettier": "^2.8.7",
-    "storybook": "^7.0.2",
-    "ts-jest": "^29.1.0",
-    "typescript": "^5.0.4",
-    "vite": "^4.2.1"
+    "jest": "^29.6.4",
+    "jest-environment-jsdom": "^29.6.4",
+    "prettier": "^3.0.2",
+    "storybook": "^7.4.0",
+    "ts-jest": "^29.1.1",
+    "typescript": "^5.2.2",
+    "vite": "^4.4.9"
   },
   "peerDependencies": {
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "engines": {
     "npm": ">=9.0.0",
