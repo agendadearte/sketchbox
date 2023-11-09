@@ -58,6 +58,10 @@
     "typescript": "^5.2.2",
     "vite": "^4.4.9"
   },
+  "overrides": {
+    "@babel/traverse": "^7.23.2",
+    "postcss": "^8.4.31"
+  },
   "peerDependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
