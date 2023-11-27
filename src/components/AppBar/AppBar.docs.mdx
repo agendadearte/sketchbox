@@ -1,0 +1,14 @@
+import { Meta, Primary, Title } from '@storybook/blocks';
+import { PropertiesList } from '#root/.storybook/blocks/PropertiesList';
+
+import * as AppBarStories from './AppBar.stories';
+import { component, cssProps } from './assets/variables';
+
+<Meta of={AppBarStories} />
+
+<Title>AppBar</Title>
+
+<Primary />
+
+## CSS custom properties
+<PropertiesList component={component} props={cssProps}/>

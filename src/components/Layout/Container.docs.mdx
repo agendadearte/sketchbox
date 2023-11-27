@@ -1,0 +1,17 @@
+import { Meta, Primary, Controls, Title } from '@storybook/blocks';
+import { PropertiesList } from '#root/.storybook/blocks/PropertiesList';
+
+import * as ContainerStories from './Container.stories';
+import { component, cssProps } from './assets/variables';
+
+<Meta of={ContainerStories} />
+
+<Title>Container</Title>
+
+<Primary />
+
+## Props
+<Controls />
+
+## CSS custom properties
+<PropertiesList component={component} props={cssProps}/>

@@ -1,0 +1,5 @@
+<svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M80 0H0V80H80V0ZM6 6H24V74H6V6ZM56 6H74V74H56V6ZM31 49V31H49V49H31ZM31 74V56H49V74H31ZM31 24V6L49 6V24H31Z"
+          fill="hsla(200, 10%, 90%, 1)"/>
+</svg>
