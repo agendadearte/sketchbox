@@ -22,7 +22,7 @@ component you will find the list of supported CSS custom properties.
 
 <Source code={`
 .any-css-hash {
-  style-prop: var(${buildPropName('component', 'styleDefinition')}, style-fallback);
+  style-prop: var(${buildPropName('component', 'element', 'cssProp')}, style-fallback);
   ...
 }
 `}/>

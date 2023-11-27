@@ -1,8 +1,8 @@
-import { Meta, Primary, Controls, Title } from '@storybook/blocks';
-import { PropertiesList } from '#root/.storybook/blocks/PropertiesList';
+import { Meta, Primary, Controls, Title } from "@storybook/blocks";
+import { PropertiesList } from "#root/.storybook/blocks/PropertiesList";
 
-import * as CardStories from './Card.stories';
-import { css } from './assets/variables';
+import * as CardStories from "./Card.stories";
+import { component, cssProps } from "./assets/variables";
 
 <Meta of={CardStories} />
 
@@ -14,4 +14,4 @@ import { css } from './assets/variables';
 <Controls />
 
 ## CSS custom properties
-<PropertiesList props={css}/>
+<PropertiesList component={component} props={cssProps}/>

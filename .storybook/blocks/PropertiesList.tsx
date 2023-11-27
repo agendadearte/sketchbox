@@ -1,13 +1,25 @@
 import { ResetWrapper } from "@storybook/components";
 import { buildPropName } from "../../src/utils/buildPropName";
 
-const buildCustomProperties = (obj: object) =>
-  Object.entries(obj).map(([key, value]) => ({
-    name: buildPropName("card", key),
-    fallback: value,
-  }));
+type Props = {
+  component: string;
+  props: { [key: string]: { [key: string]: string | number } };
+};
 
-export const PropertiesList = ({ props }) => (
+const buildCustomProperties = ({ component, props }: Props) => {
+  const customProperties: { name: string; fallback: string }[] = [];
+  Object.entries(props).map(([element]) => {
+    Object.entries(props[element]).map(([cssProp, cssValue]) => {
+      customProperties.push({
+        name: buildPropName(component, element, cssProp),
+        fallback: `${cssValue}`,
+      });
+    });
+  });
+  return customProperties;
+};
+
+export const PropertiesList = ({ component, props }: Props) => (
   <ResetWrapper>
     <table style={{ width: "100%" }}>
       <thead style={{ textAlign: "left" }}>
@@ -17,7 +29,7 @@ export const PropertiesList = ({ props }) => (
         </tr>
       </thead>
       <tbody>
-        {buildCustomProperties(props).map((prop) => (
+        {buildCustomProperties({ component, props }).map((prop) => (
           <tr key={prop.name}>
             <td style={{ whiteSpace: "nowrap" }}>{prop.name}</td>
             <td>{prop.fallback}</td>
