@@ -19,8 +19,8 @@
     "storybook": "storybook dev --disable-telemetry -p 6006",
     "build-storybook": "storybook build --disable-telemetry",
     "build-docs": "./lib/build-docs",
-    "prepare": "tsc -p tsconfig.release.json && tsc-alias -p tsconfig.json",
-    "postinstall": "husky install"
+    "prepublishOnly": "tsc -p tsconfig.release.json && tsc-alias -p tsconfig.json",
+    "prepare": "husky install"
   },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
