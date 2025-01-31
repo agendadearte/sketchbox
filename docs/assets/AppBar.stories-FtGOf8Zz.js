@@ -1,9 +1,0 @@
-import{j as o,a as l}from"./buildPropName-thQp1VjH.js";import{C as i}from"./Container-REjQ6M-6.js";import{s as a,b as p}from"./buildCustomProps-vbauxOPy.js";const d="app-bar",m={container:{backgroundColor:"hsla(200, 10%, 0%, 1)"}},g=a({width:"100%",padding:".8rem 0",...p(d,"container",m)}),f=a({display:"flex",gap:".8rem",alignItems:"center"}),h=a({height:"1.75rem"}),u=a({marginTop:".2rem",fontSize:"2.2rem",fontFamily:"Rubik, sans-serif",fontWeight:300,color:"hsla(200, 10%, 100%, 1)",textTransform:"uppercase",lineHeight:".75"}),s=({children:r})=>o("header",{className:g,children:o(i,{children:r})});try{s.displayName="AppBar",s.__docgenInfo={description:"",displayName:"AppBar",props:{}}}catch{}const A="data:image/svg+xml,%3csvg%20viewBox='0%200%2080%2080'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M80%200H0V80H80V0ZM6%206H24V74H6V6ZM56%206H74V74H56V6ZM31%2049V31H49V49H31ZM31%2074V56H49V74H31ZM31%2024V6L49%206V24H31Z'%20fill='hsla(200,%2010%25,%2090%25,%201)'/%3e%3c/svg%3e",_={title:"Components/AppBar",component:s,tags:[],parameters:{controls:{hideNoControlsWarning:!0}}},e={args:{children:l("div",{className:f,children:[o("img",{className:h,src:A,alt:"Logo Agenda de Arte"}),o("span",{className:u,children:"Agenda de Arte"})]})}};var n,t,c;e.parameters={...e.parameters,docs:{...(n=e.parameters)==null?void 0:n.docs,source:{originalSource:`{
-  args: {
-    children: <div className={css.logoContainer}>
-        <img className={css.icon} src={logoSvg} alt="Logo Agenda de Arte" />
-        <span className={css.logotype}>Agenda de Arte</span>
-      </div>
-  }
-}`,...(c=(t=e.parameters)==null?void 0:t.docs)==null?void 0:c.source}}};const v=["Default"],N=Object.freeze(Object.defineProperty({__proto__:null,Default:e,__namedExportsOrder:v,default:_},Symbol.toStringTag,{value:"Module"}));export{N as A,m as a,d as c};
-//# sourceMappingURL=AppBar.stories-FtGOf8Zz.js.map
