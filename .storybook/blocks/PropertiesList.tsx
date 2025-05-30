@@ -1,4 +1,3 @@
-import { ResetWrapper } from "@storybook/components";
 import { buildPropName } from "../../src/utils/buildPropName";
 
 type Props = {
@@ -20,22 +19,20 @@ const buildCustomProperties = ({ component, props }: Props) => {
 };
 
 export const PropertiesList = ({ component, props }: Props) => (
-  <ResetWrapper>
-    <table style={{ width: "100%" }}>
-      <thead style={{ textAlign: "left" }}>
-        <tr>
-          <th style={{ width: "50%" }}>Name</th>
-          <th>Fallback</th>
+  <table style={{ width: "100%" }}>
+    <thead style={{ textAlign: "left" }}>
+      <tr>
+        <th style={{ width: "50%" }}>Name</th>
+        <th>Fallback</th>
+      </tr>
+    </thead>
+    <tbody>
+      {buildCustomProperties({ component, props }).map((prop) => (
+        <tr key={prop.name}>
+          <td style={{ whiteSpace: "nowrap" }}>{prop.name}</td>
+          <td>{prop.fallback}</td>
         </tr>
-      </thead>
-      <tbody>
-        {buildCustomProperties({ component, props }).map((prop) => (
-          <tr key={prop.name}>
-            <td style={{ whiteSpace: "nowrap" }}>{prop.name}</td>
-            <td>{prop.fallback}</td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
-  </ResetWrapper>
+      ))}
+    </tbody>
+  </table>
 );
