@@ -17,8 +17,8 @@
     "lint": "npx eslint src --fix",
     "test": "jest",
     "storybook": "storybook dev --disable-telemetry -p 6006",
-    "build-storybook": "storybook build --disable-telemetry",
-    "build-docs": "./lib/build-docs",
+    "build:storybook": "storybook build --disable-telemetry",
+    "build:web": "./bin/build-web",
     "prepublishOnly": "tsc -p tsconfig.release.json && tsc-alias -p tsconfig.json",
     "prepare": "husky"
   },
